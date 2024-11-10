@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import './appindex.css'
 
 const MyApp=()=>{
 const [currentState,setCreds]=useState({statusText:"Your Device is Locked",
@@ -22,7 +23,7 @@ const [currentState,setCreds]=useState({statusText:"Your Device is Locked",
 
     const {statusText,btnText,altText,imgUrl}=currentState
     
-return <div>
+return <div className="container">
     <img src={imgUrl} alt={altText}/>
     <h1>{statusText}</h1>
     {btnText==="Unlock"?<button type="button" onClick={onUnlock}>UnLock</button>:<button type="button" onClick={onLock}>Lock</button>}
